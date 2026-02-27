@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AI Financial Buddy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Market Ticker -->
+    <div class="market-ticker">
+        <div class="ticker-wrap">
+            <div class="ticker-items">
+                <span class="ticker-item"><span class="ticker-symbol">NIFTY 50</span><span class="ticker-price">25,180.45</span><span class="ticker-change positive">+0.84%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">SENSEX</span><span class="ticker-price">82,456.30</span><span class="ticker-change positive">+0.72%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">BANK NIFTY</span><span class="ticker-price">52,340.15</span><span class="ticker-change negative">-0.15%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">NIFTY IT</span><span class="ticker-price">35,678.90</span><span class="ticker-change positive">+1.23%</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M15 20L18 23L25 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>AI Financial Buddy</span>
+                </div>
+                <div class="header-search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search stocks, news, topics...">
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="notifications">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" stroke-width="2"/>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-menu">
+                    <div class="user-avatar">R</div>
+                    <div class="user-info">
+                        <div class="user-name">Rishabh</div>
+                        <div class="user-plan">Growth Plan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Overview</span>
+                </a>
+                <a href="portfolio.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Portfolio</span>
+                </a>
+                <a href="stocks.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <line x1="12" y1="1" x2="12" y2="23" stroke="currentColor" stroke-width="2"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Stocks</span>
+                </a>
+                <a href="news.html" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>News</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Learn</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>History</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1v6m0 6v6M5.64 5.64l4.24 4.24m4.24 4.24l4.24 4.24m0-12.72l-4.24 4.24m-4.24 4.24l-4.24 4.24" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="ai-chat-trigger" onclick="toggleAIChat()">
+                    <div class="ai-icon">🤖</div>
+                    <div>
+                        <div class="ai-label">Ask AI Buddy</div>
+                        <div class="ai-status">Online 24/7</div>
+                    </div>
+                </div>
+                <div class="wallet-quick">
+                    <div class="wallet-icon">💳</div>
+                    <div class="wallet-info">
+                        <div class="wallet-label">PPI Wallet</div>
+                        <div class="wallet-balance">₹5,420</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div>
+                    <h1>Welcome back, Rishabh! 👋</h1>
+                    <p>Here's your financial overview for February 26, 2026</p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn btn-outline btn-sm">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4v16h16" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="20 10 12 18 8 14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Download Report
+                    </button>
+                    <button class="btn btn-primary btn-sm">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Quick Invest
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card primary">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Portfolio Value</span>
+                        <span class="stat-icon">💰</span>
+                    </div>
+                    <div class="stat-value">₹24,580</div>
+                    <div class="stat-change positive">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="17 6 23 6 23 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        +12.4% this month
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Wallet Balance</span>
+                        <span class="stat-icon">💳</span>
+                    </div>
+                    <div class="stat-value">₹5,420</div>
+                    <div class="stat-meta">Available to invest</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Today's Gain/Loss</span>
+                        <span class="stat-icon">📈</span>
+                    </div>
+                    <div class="stat-value">+₹182</div>
+                    <div class="stat-change positive">+0.74%</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="stat-title">Total Investments</span>
+                        <span class="stat-icon">📊</span>
+                    </div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-meta">Active positions</div>
+                </div>
+            </div>
+
+            <!-- Chart and News Grid -->
+            <div class="content-grid two-col">
+                <!-- Portfolio Performance Chart -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>Portfolio Performance</h3>
+                        <div class="chart-period">
+                            <button class="period-btn active">1D</button>
+                            <button class="period-btn">1W</button>
+                            <button class="period-btn">1M</button>
+                            <button class="period-btn">3M</button>
+                            <button class="period-btn">1Y</button>
+                            <button class="period-btn">All</button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <svg viewBox="0 0 400 200" style="width: 100%; height: 200px;">
+                            <polyline points="0,150 40,120 80,140 120,90 160,100 200,70 240,80 280,50 320,60 360,40 400,50" 
+                                      stroke="url(#gradient)" stroke-width="3" fill="none"/>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#00D9FF"/>
+                                <stop offset="100%" stop-color="#7B61FF"/>
+                            </linearGradient>
+                            <rect x="0" y="0" width="400" height="200" fill="url(#fillGradient)" opacity="0.1"/>
+                            <linearGradient id="fillGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#00D9FF" stop-opacity="0.2"/>
+                                <stop offset="100%" stop-color="#7B61FF" stop-opacity="0"/>
+                            </linearGradient>
+                        </svg>
+                    </div>
+                    <div class="chart-legend">
+                        <span class="legend-item">
+                            <span class="legend-dot" style="background: var(--primary);"></span>
+                            Current Portfolio
+                        </span>
+                        <span class="legend-item">
+                            <span class="legend-dot" style="background: var(--gray);"></span>
+                            Benchmark (NIFTY 50)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Today's Top News -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>📰 Today's Top News</h3>
+                        <a href="news.html" class="see-all">View All →</a>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-item">
+                            <div class="news-badge trending">🔥 Trending</div>
+                            <div class="news-title">RBI announces Digital Rupee expansion to 10 more cities</div>
+                            <div class="news-meta">
+                                <span>Economic Times</span>
+                                <span>•</span>
+                                <span>2h ago</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-badge">📈 Markets</div>
+                            <div class="news-title">Nifty 50 hits all-time high, crosses 25,000 mark</div>
+                            <div class="news-meta">
+                                <span>Moneycontrol</span>
+                                <span>•</span>
+                                <span>4h ago</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-badge">💻 Tech</div>
+                            <div class="news-title">IT stocks rally on AI investment boom, Infosys up 5%</div>
+                            <div class="news-meta">
+                                <span>Bloomberg</span>
+                                <span>•</span>
+                                <span>6h ago</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="news-badge">💰 Tax</div>
+                            <div class="news-title">New tax saving rules for students: What you need to know</div>
+                            <div class="news-meta">
+                                <span>Mint</span>
+                                <span>•</span>
+                                <span>8h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Holdings and AI Recommendations -->
+            <div class="content-grid two-col">
+                <!-- Current Holdings -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>Your Investments</h3>
+                        <button class="btn-text">Manage Portfolio →</button>
+                    </div>
+                    <div class="holdings-list">
+                        <div class="holding-item">
+                            <div class="holding-info">
+                                <div class="holding-icon" style="background: rgba(0,217,255,0.1);">🏢</div>
+                                <div>
+                                    <div class="holding-name">HDFC Bank</div>
+                                    <div class="holding-qty">5 shares @ ₹1,650</div>
+                                </div>
+                            </div>
+                            <div class="holding-value">
+                                <div class="holding-price">₹8,250</div>
+                                <div class="holding-change positive">+3.2%</div>
+                            </div>
+                        </div>
+                        <div class="holding-item">
+                            <div class="holding-info">
+                                <div class="holding-icon" style="background: rgba(123,97,255,0.1);">💻</div>
+                                <div>
+                                    <div class="holding-name">Infosys</div>
+                                    <div class="holding-qty">8 shares @ ₹1,425</div>
+                                </div>
+                            </div>
+                            <div class="holding-value">
+                                <div class="holding-price">₹11,400</div>
+                                <div class="holding-change positive">+5.8%</div>
+                            </div>
+                        </div>
+                        <div class="holding-item">
+                            <div class="holding-info">
+                                <div class="holding-icon" style="background: rgba(255,107,157,0.1);">📊</div>
+                                <div>
+                                    <div class="holding-name">Nifty Index Fund</div>
+                                    <div class="holding-qty">0.5 units @ ₹9,860</div>
+                                </div>
+                            </div>
+                            <div class="holding-value">
+                                <div class="holding-price">₹4,930</div>
+                                <div class="holding-change negative">-1.2%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="portfolio.html" class="btn btn-outline btn-block">View All Holdings</a>
+                    </div>
+                </div>
+
+                <!-- AI Recommendations -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <h3>🤖 AI Recommendations</h3>
+                        <span class="ai-badge">Updated 5 min ago</span>
+                    </div>
+                    <div class="recommendation-list">
+                        <div class="recommendation-item">
+                            <div class="rec-icon">📈</div>
+                            <div class="rec-content">
+                                <div class="rec-title">Rebalance Portfolio</div>
+                                <div class="rec-desc">Your equity allocation is 5% above target. Consider moving ₹1,200 to debt funds.</div>
+                                <div class="rec-confidence">95% confidence</div>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <div class="rec-icon">💰</div>
+                            <div class="rec-content">
+                                <div class="rec-title">Tax Saving Opportunity</div>
+                                <div class="rec-desc">Invest ₹10,000 in ELSS to save ₹3,000 in taxes under Section 80C before March 31.</div>
+                                <div class="rec-confidence">92% confidence</div>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <div class="rec-icon">🎯</div>
+                            <div class="rec-content">
+                                <div class="rec-title">Goal Progress: Emergency Fund</div>
+                                <div class="rec-desc">You're 65% to your ₹50,000 goal. On track to reach by June 2026!</div>
+                                <div class="progress-bar" style="margin-top: var(--space-sm);">
+                                    <div class="progress-fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Section -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h3>📚 Continue Learning</h3>
+                    <a href="#" class="see-all">View All Courses →</a>
+                </div>
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <div class="learning-badge">In Progress</div>
+                        <div class="learning-icon">📈</div>
+                        <div class="learning-content">
+                            <h4>Mutual Funds Masterclass</h4>
+                            <p>12 lessons • 65% complete</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-badge new">New</div>
+                        <div class="learning-icon">💰</div>
+                        <div class="learning-content">
+                            <h4>Tax Planning for Students</h4>
+                            <p>8 lessons • Just added</p>
+                            <button class="btn btn-outline btn-sm">Start Learning</button>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-badge popular">Popular</div>
+                        <div class="learning-icon">📊</div>
+                        <div class="learning-content">
+                            <h4>Stock Market Basics</h4>
+                            <p>15 lessons • 2.5 hours</p>
+                            <button class="btn btn-outline btn-sm">Start Learning</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div class="ai-chat-widget" id="aiChatWidget">
+        <div class="chat-header">
+            <div class="chat-title">
+                <div class="ai-avatar">🤖</div>
+                <div>
+                    <div class="chat-name">AI Financial Buddy</div>
+                    <div class="chat-status">Online • Ready to help</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="toggleAIChat()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="chat-message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>Hi Rishabh! I'm your AI Financial Buddy. How can I help you today?</p>
+                    <div class="quick-actions">
+                        <button class="quick-action">📊 Portfolio Analysis</button>
+                        <button class="quick-action">💡 Investment Ideas</button>
+                        <button class="quick-action">💰 Tax Saving Tips</button>
+                        <button class="quick-action">📚 Learn Investing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" class="chat-input" placeholder="Ask me anything about finance...">
+            <button class="chat-send">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <line x1="22" y1="2" x2="11" y2="13" stroke="currentColor" stroke-width="2"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function toggleAIChat() {
+            const widget = document.getElementById('aiChatWidget');
+            widget.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
